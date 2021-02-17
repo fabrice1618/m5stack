@@ -340,3 +340,30 @@ while True:
     setScreenColor(0x3333ff)
     wait(1)
 ```
+ 
+### LED rouge - verte
+<https://wiki.seeedstudio.com/Grove-Red_LED/>
+<https://www.seeedstudio.com/Grove-Green-LED.html>
+
+### Switch(P)
+<https://www.seeedstudio.com/Grove-Switch-P.html>
+
+### Magnetic Switch
+<https://www.seeedstudio.com/Grove-Magnetic-Switch.html>
+
+### Grove - Light Sensor v1.2 - LS06-S phototransistor
+<https://www.seeedstudio.com/Grove-Light-Sensor-v1-2-LS06-S-phototransistor.html>
+
+### Grove - Sound Sensor/ Noise Detector for Arduino
+<https://www.seeedstudio.com/Grove-Loudness-Sensor.html>
+
+### Grove - IR Distance Interrupter v1.2
+<https://www.seeedstudio.com/Grove-IR-Distance-Interrupter-v1-2.html>
+
+### Grove - Piezo Buzzer/Active Buzzer 
+<https://www.seeedstudio.com/Grove-Buzzer.html>
+
+### Grove - Relay
+<https://www.seeedstudio.com/Grove-Relay.html>
+
+
