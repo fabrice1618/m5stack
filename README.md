@@ -296,7 +296,11 @@ Documentation: <http://docs.micropython.org/en/latest/>
     - MQTT <https://www.youtube.com/watch?v=C0-vGLvHGyk>
     - API openweathermap.org <https://www.youtube.com/watch?v=CqEPpeGpmkg>
     - rshell - lire/écrire fichiers <https://www.youtube.com/watch?v=eNkw9v2U_Zk>
+    - Code source des vidéos <https://github.com/titimoby/M5_experiments>
 - Documentation UIFlow <https://m5stack.github.io/UIFlow_doc/en/>    
+- Documentation MicroPython sur l'ESP32 <http://docs.micropython.org/en/latest/esp32/quickref.html>
+- Manuel utilisateur de UIFlow <https://flow.m5stack.com/download/M5GO_User_Manual_en.pdf>
+- Introduction à Grove <http://www.seeedstudio.com/document/pdf/Introduction%20to%20Grove.pdf>
 
 ## Environnements de développement
 - UIFlow ( Blockly et MicroPython ) <https://flow.m5stack.com/>
