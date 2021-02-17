@@ -296,7 +296,7 @@ Documentation: <http://docs.micropython.org/en/latest/>
     - MQTT <https://www.youtube.com/watch?v=C0-vGLvHGyk>
     - API openweathermap.org <https://www.youtube.com/watch?v=CqEPpeGpmkg>
     - rshell - lire/écrire fichiers <https://www.youtube.com/watch?v=eNkw9v2U_Zk>
-    
+- Documentation UIFlow <https://m5stack.github.io/UIFlow_doc/en/>    
 
 ## Environnements de développement
 - UIFlow ( Blockly et MicroPython ) <https://flow.m5stack.com/>
@@ -366,4 +366,51 @@ while True:
 ### Grove - Relay
 <https://www.seeedstudio.com/Grove-Relay.html>
 
+## Connexion à l'API openweathermap.org avec Wifi
+Stockage de la configuration Wifi dans un fichier JSON. Executer ce programme pour disposer du fichier /flash/config.json
 
+```python
+import ujson
+config = {
+    'ssid':'SSID du réseau Wifi',
+    'passwd':'mot de passe',
+    'openweathermapApiKey': 'cle API openweathermap'
+    }
+with open('/flash/config.json', 'w') as fichier:
+    ujson.dump(config, fichier)
+```
+Exemple d'appel de l'API
+```
+req = urequests.get('http://api.openweathermap.org/data/2.5/weather?q={city name},{state code},{country code}&appid={your api key}')
+```
+Interrogation de l'API et écriture des résultats sur écran LCD M5stack
+```python
+import ujson
+from m5stack import *
+from m5ui import *
+import wifiCfg
+import urequests
+
+lcd.clear()
+
+fichier = open("config.json")
+config = ujson.load(fichier)
+if not wifiCfg.is_connected():
+    lcd.println("connection au wifi")
+    wifiCfg.doConnect(config["ssid"], config["passwd"])
+req = urequests.get(
+    "http://api.openweathermap.org/data/2.5/weather?q=Lyon&appid="
+    + config["openweathermapApiKey"]
+    + "&units=metric"
+)
+meteo = req.json()
+
+lcd.clear()
+lcd.font(lcd.FONT_DejaVu40)
+lcd.text(10, 10, "meteo")
+lcd.text(20, 45, meteo["weather"][0]["description"])
+lcd.text(50, 120, "temperature")
+lcd.text(80, 155, str(meteo["main"]["temp"]))
+
+fichier.close()
+```
