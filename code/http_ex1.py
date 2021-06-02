@@ -3,7 +3,7 @@ import m5config
 import urequests
 
 # Connexion au réseau wifi
-connect( get_config('ssid'), get_config('passwd'), affiche_configuration=True )
+m5wifi.connect( m5config.get_config('ssid'), m5config.get_config('passwd'), affiche_configuration=False )
 
-req = urequests.get( "https://m5stack.com/" )
+req = urequests.get( "http://blended.mips.science/" )
 print( req.text )

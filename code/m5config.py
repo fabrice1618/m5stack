@@ -14,6 +14,7 @@ def exist_config_file():
 # Lecture de la configuration dans /flash/config.json
 def read_config_file():
 
+    config = {}
     if exist_config_file():
         with open('/flash/config.json') as fichier:
             config = ujson.load(fichier)

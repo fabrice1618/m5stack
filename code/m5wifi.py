@@ -1,5 +1,6 @@
 import time
 import network
+import ubinascii
 
 # Connect to a specific wifi network
 def connect(ssid, password, timeout=30000, affiche_configuration=False):
@@ -48,6 +49,7 @@ def ifconfig():
     return( config )
 
 def wificonfig():
+    wifi = network.WLAN(network.STA_IF)
     config = {}
     config['rssi'] = wifi.status('rssi')
     config['mac'] = ubinascii.hexlify( wifi.config('mac') )
@@ -73,6 +75,7 @@ def print_config():
     return
 
 def scan():
+    wifi = network.WLAN(network.STA_IF)
     scanlist = wifi.scan()
 
     wlanlist = []
