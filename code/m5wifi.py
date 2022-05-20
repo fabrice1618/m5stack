@@ -101,6 +101,6 @@ def authmode_desc( authmode ):
     elif authmode == 4:
         auth_desc = 'WPA/WPA2-PSK'
     else:
-        auth_desc = str( wlan[4] )
+        auth_desc = str( authmode )
 
     return( auth_desc )

@@ -7,7 +7,7 @@ def get_api_data():
     # https://openweathermap.org/current#current_JSON
 
     # Connexion au réseau wifi
-    m5wifi.connect( get_config('ssid'), get_config('passwd') )
+    m5wifi.connect( m5config.get_config('ssid'), m5config.get_config('password') )
 
     # Lecture de la clé de l'API
     api_key = m5config.get_config('openweathermapApiKey')

@@ -1,6 +1,38 @@
 # IOT - Microcontrôleur
 
+## Panorama
+
+
+Plateforme | Processeur | RAM | Développement | caractéristiques
+---------|----------|---------|----------|---------
+Adafruit Trinket | ATtiny85 - 16 MHz | 8 Kb | C++ | I/O 5 digital - dont 1 Analog
+ Arduino uno | ATmega328P - 16 MHz | 32 Kb | C++ | I/O 14 digital - 6 Analog
+ Arduino Nano | ATmega2560 - 16 MHz | 32 Kb | C++ | I/O 22 digital - 8 Analog 
+ Arduino Mega 2560 | ATmega328 - 16 MHz | 256 Kb | C++ | I/O 54 digital - 16 Analog 
+ Arduino Nano 33 IoT | SAMD21 Cortex-M0 - 48 MHz | 256 Kb | C++ | I/O 14 digital - 8 Analog 
+ STM32 Black Pill | STM32 Cortex-M3 - 72 MHz | 64 Kb + 20 Kb | C++ / Micropython | 
+ Arduino Portenta H7 | STM32 dual Cortex-M7 - 480 MHz | 8 Mb + 16Mb | C++ / Micropython | I/O WIFI Ethernet tensorflow ...
+ Raspberry Pi Pico | RP2040 cortex dual core M0+ - 133 MHz | 2 Mb + 264 Kb | C++ / Micropython | I/O 30 multifonctions
+ NodeMCU ESP8266 | Tensilica 32-bit RISC CPU - 80 MHz | 4 Mb + 64 Kb | C++ / Micropython | I/O 16 Digital 1 Analog - Wifi
+ HUZZAH32 – ESP32 | dual core Tensilica LX6 - 240 MHz | 4 Mb + 520 Kb | C++ / Micropython | I/O 12 Analog - Wifi - Bluetooth
+ M5Stack BASIC | ESP32 dual core - 240 MHz | 16 Mb + 520 Kb | C++ / Micropython | I/O 12 Analog - Wifi - Bluetooth
+ Raspberry Pi 4 | Quad-core Cortex-A72 - 1.5 GHz | 4 Gb | C++ / Micropython / Linux | I/O 40 - Wifi - Bluetooth - Ethernet 
+
 ## Les cartes MCU
+
+### Adafruit Trinket
+
+![Attiny 85](images/attiny85.jpg)
+
+* Microcontroller 	ATtiny85
+* Digital I/O Pins 	5
+* Analog Input Pins 	1
+* Flash Memory 	8 Kb 
+* SRAM 	512 b
+* EEPROM 	512 b
+* Clock Speed 	8 MHz
+* Dimensions: 31mm x 15.5 x 5mm
+
 ### Arduino Uno
 
 ![Arduino Uno](images/arduino_uno.jpg)
@@ -268,6 +300,20 @@ M5stack M5Core2 <https://docs.m5stack.com/#/en/core/core2>
     * ADC / DAC
     * IR sensor
 
+### Raspberry PI 4
+
+![Raspberry PI 4](images/raspberry-pi-4.png)
+
+* Processor: Quad-core Cortex-A72 (ARM v8) 64-bit SoC @ 1.5 GHz.
+* Digital I/O Pins 	40
+* 4 Go de RAM
+* Gigabit Ethernet
+* USB 2 et USB 3
+* Stereo audio
+* WIFI 2.4 Ghz / 5 GHz / Bluetooth
+* micro HDMI
+* SD Card ....
+* Linux
 
 ### Capteurs interface Grove
 
@@ -276,6 +322,9 @@ M5stack M5Core2 <https://docs.m5stack.com/#/en/core/core2>
 Il existe toutes sortes de capteurs.
 
 ## MicroPython
+
+![MicroPython](images/Micropython.png)
+
 MicroPython est une ré-écriture de Python pour les microcontrôleurs (2013).
 
 Plateformes: STM32 / ESP8266 / ESP32 / RISC-V
